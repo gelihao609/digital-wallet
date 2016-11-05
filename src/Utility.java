@@ -11,6 +11,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+/*
+*	static Utility class to do routine OI work
+*/
 public class Utility {
 	public static List<Transaction> loadFile(String filePath) {
 		String csvFile = filePath;
@@ -50,7 +53,7 @@ public class Utility {
 		return trans;
 	}
 
-	// clean data so that if follows schema (5 items per line)
+	// clean data so that if follows schema (5 items per line), have correct timestamp, etc.
 	private static String[] cleanData(String line) {
 		String cvsSplitBy = ",";
 		int MAX_MESSAGE_LENGTH = 200;

@@ -1,5 +1,12 @@
 import java.util.*;
-
+/*
+*		ID --|-- Degree1 - FriendsSet 
+*			 |-- Degree2 - FriendsSet
+*			 |-- Degree3 - FriendsSet
+*
+* 		Each ID has its friends of different degrees, all IDs are then stored in map: multiLevelFriendMap
+*
+*/
 public class FriendNetWork {
 	// Friend dictionary with levels
 	private Map<String, Map<Integer, Set<String>>> multiLevelFriendMap;
@@ -38,8 +45,7 @@ public class FriendNetWork {
 		}
 	}
 
-	// build different level friendMap
-
+	// build different level friendMap, e.g. if level is 2, we will have 2 levels, if level is 3, we will have 3 levels, that is level1, 2 and 3.
 	public void buildFriendMapWithDegree(int level) {
 		if (level <= 1)
 			return;
@@ -49,13 +55,10 @@ public class FriendNetWork {
 		for (String user : allUsers) {
 			System.out.println("No: " + counter++ + " CURRENT ID: " + user);
 			int currLevel = 1;
-			// Map<Integer, Set<String>> nextLevelMap = new HashMap<Integer,
-			// Set<String>>();
 			Set<String> visited = new HashSet<String>();
 			while (currLevel < level) {
 				Set<String> currentFriendMap = multiLevelFriendMap.get(user)
 						.get(currLevel);
-				// HashMap<Integer, Set<String>>();
 				Set<String> nextLevelFriendMap = new HashSet<String>();
 				visited.add(user);
 				for (String friend : currentFriendMap) {

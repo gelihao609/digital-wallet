@@ -7,6 +7,7 @@ class antifraud {
 		this.network = network;
 	}
 
+	//Feature 1
 	public String[] checkIsVerifiedAsMyFriend(Object[] trans) {
 		String[] results = new String[trans.length];
 		for (int i = 0; i < trans.length; i++) {
@@ -18,6 +19,7 @@ class antifraud {
 
 	}
 
+	//Feature 2
 	public String[] checkIsVerifiedAsMy2ndDegreeFriend(Object[] trans) {
 		String[] results = new String[trans.length];
 		for (int i = 0; i < trans.length; i++) {
@@ -30,6 +32,7 @@ class antifraud {
 		return results;
 	}
 
+	//Feature 3
 	public String[] checkIsVerifiedAsMy3rdDegreeFriend(Object[] trans) {
 		String[] results = new String[trans.length];
 		for (int i = 0; i < trans.length; i++) {

@@ -1,4 +1,6 @@
-
+/*
+*	data structure for transaction
+*/
 public class Transaction {
 	public Transaction(String time, String sender, String receiver,
 			String amount, String message) {
@@ -16,11 +18,9 @@ public class Transaction {
 	
 	
 	public String getSender() {
-		// TODO Auto-generated method stub
 		return senderId;
 	}
 	public String getReceiver() {
-		// TODO Auto-generated method stub
 		return receiverId;
 	}
 }
