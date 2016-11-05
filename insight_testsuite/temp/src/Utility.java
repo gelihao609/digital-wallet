@@ -46,7 +46,6 @@ public class Utility {
 				}
 			}
 		}
-		System.out.println("finish read.");
 		return trans;
 	}
 
@@ -95,7 +94,6 @@ public class Utility {
 			bw.newLine();
 		}
 		bw.close();
-		System.out.println("finish write.");
 	}
 
 }
